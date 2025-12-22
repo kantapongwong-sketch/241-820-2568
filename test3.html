@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container  {
+            background-color: lightcoral;
+        }
+        .main-container .item {
+            background-color: rgb(198, 228, 163);
+        }
+        .button {
+            background-color: rgb(0, 195, 255);
+            border: 0;
+            padding: 10px;
+        }
+        .button-active {
+            background-color: rgb(225, 250, 0); 
+        }
+        .button-danger {
+            background-color: red; 
+        }
+        .item1 + .item2 {
+            background-color: lightcoral;
+        }
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--- 1.item เป็นลูกค้าของ container -->
+    <div class="container">
+        container
+        <div class="item">
+            item 1
+        </div>
+    </div>
+    <!--- 2.item2 ลูกค้าของ container แค่ชั้นเดียว -->
+    <div class="main-container">
+        container
+         <div class="item">
+            item 
+        </div>
+        <div class="item">
+            item 1
+        </div>
+        <div class="item">
+            item 2
+        </div>
+         <div class="item">
+            item 3
+        </div>
+    </div>
+
+    <!--- 3.มี clss ติดกัน -->
+    <button class="button">Click Me</button>
+    <button class="button-active">Click Me</button>
+     <button class="button-danger">Click Me</button>
+     <!--- 4.เหมือนกัน -->
+     <div class="item1">item1</div>
+        <div class="item2">item2</div>
+
+    <!--- 5. attribute selector -->
+    <input type="text" name="firstname">
+    
+</body>
+</html>
