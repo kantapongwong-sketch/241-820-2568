@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <!------  
+ชื่อ <input 
+        id="fname"
+        type="text"
+        name="fname"
+        value="ทดสอบชื่อ"/>
+นามสกุล <input 
+        id="lname"
+        class="lname"
+        type="text"
+        name="lname"
+        value="ทดสอบนามสกุล"/>
+        
+<body>
+    <script>
+        let inputDOM = document.getElementsByClassName("input");
+        console.log(inputDOM);
+        for (let i = 0; i < inputDOM.length; i++) {
+            console.log(inputDOM[i].value);
+        }
+        
+    </script>
+</body>
+---->
+///selectDOM
+///document.getElentsById
+///document.getElentsByName
+
+//java events
+onelick
+onechange
+onkeyup
+onkeydown
+<!--------------
+<body>
+    งานอดิเรก:
+    <input type="checkbox" name="hobby" value="football" checked/> Reading
+    <input type="checkbox" name="hobby" value="basketball"/> Traveling
+    <input type="checkbox" name="hobby" value="tennis" checked/> Tennis
+    <script>
+        let checkboxsInput = document.querySelectorAll('input[name="hobby"]');
+        for (let i = 0; i < checkboxsInput.length; i++)  {
+                console.log(checkboxsInput[i].value);
+            }
+      
+       // let fname = document.querySelector('input[name="fname"]');
+        //console.log(fname.value);
+    </script>
+</body>
+
+    
+
+<body>
+    <button onclick="userClicked()" >คลิก!! </button>
+    <div onclick="divClicked()">คลิก Div</div>
+    <script>
+        function userClicked() {
+            console.log("User clicked the button");
+        }
+
+        function divClicked() {
+            console.log("Div clicked");
+        }
+</body>
+--------->
+<body>
+    <input type="radio" name="gender" value="meta" onchange="chageGender()" checked="true">Male
+    <input type="radio" name="gender" value="fname"onchange="chageGender()" >female
+    <script>
+        function chageGender() {
+           //เลือก gender ทุก input ออกมา
+           let genderInputs = document.querySelectorAll('input[name="gender"]');
+           //ใคร checked อยู่ = เพศโดนเลิลือกอยู่
+           for (let i = 0; i < genderInputs.length; i++) {
+               if (genderInputs[i].checked) {
+                   console.log("Gender selected: " + genderInputs[i].value);
+               }
+           }
+        }
+           </script>
+</body>
+</html>
