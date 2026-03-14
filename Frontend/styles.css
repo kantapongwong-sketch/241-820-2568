@@ -1,143 +1,116 @@
-/* General Styles */
+/* 1. ดึง Font จากโฟลเดอร์ Kanit ที่อยู่ด้านนอก */
+@font-face {
+    font-family: 'Kanit';
+    /* ../ หมายถึงถอยออกจากโฟลเดอร์ Frontend 1 ชั้น */
+    src: url('../Kanit/Kanit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('../Kanit/Kanit-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* 2. ตั้งค่าพื้นฐานและ Layout */
+* {
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: #f5f7fa;
     margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #333;
 }
 
+/* 3. ตกแต่งฟอร์มให้ดูดี */
 .container {
-    background: #fff;
-    border-radius: 10px;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    max-width: 500px;
     width: 100%;
-    box-sizing: border-box;
+    max-width: 450px;
 }
 
 .header {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px;
-    color: #4a4a4a;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* Form Input Styles */
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .form-input {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .header-form {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
+    min-width: 80px;
+    font-weight: 500;
 }
 
-.form {
-    width: 100%;
-    padding: 10px;
+.form, textarea {
+    flex: 1;
+    padding: 8px 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-.form:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-    resize: vertical;
-    min-height: 80px;
-    transition: border-color 0.3s ease;
-}
-
-textarea:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
-}
-
-/* Flex Styles */
-.flex {
-    display: flex;
-    align-items: center;
-}
-
-.flex.form-input .header-form {
-    min-width: 100px;
-    margin-right: 15px;
-}
-
-.gender .flex {
-    justify-content: space-around;
+    height: 80px;
     margin-top: 5px;
 }
 
-.gender input[type="radio"] {
-    margin-right: 5px;
+.message {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: none;
 }
 
-input[type="checkbox"] {
-    margin-right: 5px;
+.message.success {
+    background-color: #45a049;
+    color: #ddd;
+    display: block
 }
 
-/* Button Styles */
-.center {
-    text-align: center;
-    margin-top: 30px;
+.message.danger {
+    background-color: red;
+    color: #ddd;
+    display: block
 }
 
 .button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+    transition: 0.3s;
 }
 
 .button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.button:active {
-    transform: translateY(0);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-        margin: 10px;
-    }
-
-    .flex.form-input {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .flex.form-input .header-form {
-        margin-bottom: 5px;
-        margin-right: 0;
-    }
+    background-color: #45a049;
 }

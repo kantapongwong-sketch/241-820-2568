@@ -1,0 +1,43 @@
+// Show all Contaainers (default Show Just running)
+docker ps --all
+
+// show Just running Contaainers
+docker run hello-word
+
+
+
+
+
+
+//pull container_id
+docker create <image_name>
+
+//create a Contaainers from an image
+docker create <image_name>
+
+//remove a container
+docker rm <container_id>
+
+//remove all Contaainers
+docker system prune 
+
+//remove all Contaainers
+docker system prune
+
+//nginx sever
+docker run nginx
+
+//sh container
+docker run -it <image_name or container_id> sh
+
+//cat file inside container
+cat filename.txt
+
+
+
+
+foreground mode
+docker run -d -p 9000:80 nginx
+
+//detached mode
+docker run -d -p 9100:80 nginx
